@@ -132,7 +132,6 @@ dmypy.json
 
 #iki
 poetry.lock
-pyproject.toml
 dynamics.code-workspace
 *.png
 *.mp4
@@ -141,5 +140,3 @@ dynamics.code-workspace
 .idea
 .vscode/
 .data/settings.txt
-iki/*/*/*/data/settings.txt
-iki/*/*/*/settings.txt

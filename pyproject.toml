@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ukr-mnist"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "ukr_mnist"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.11"
+numpy = "^1.24.2"
+jax = "^0.4.6"
+jaxlib = "^0.4.6"
+matplotlib = "^3.7.1"
+scikit-learn = "^1.2.2"
+flake8 = "^6.0.0"
+autopep8 = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
