@@ -12,7 +12,7 @@ eta = 0.1
 sigma = 0.1
 epochs = 100
 z_dim = 2
-z = torch.normal(mean=0, std=0.1, size=(data_num, z_dim), requires_grad=True)
+z = torch.normal(mean=0, std=0.05, size=(data_num, z_dim), requires_grad=True)
 # 保存dictの設定
 history = {}
 # history[]
