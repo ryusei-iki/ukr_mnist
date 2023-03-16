@@ -14,13 +14,19 @@ class ukr:
         self.epochs = epochs
 
     def train(self, ):
+        # fig = plt.figure()
+        # gs = fig.add_gridspec(1, 2)
+        # ax1 = fig.add_subplot(gs[0, 0], projection='3d')
+        # ax2 = fig.add_subplot(gs[0, 1])
         for epoch in range(self.epochs):
-            loss = self.E(self.z)
+            x = self.f(self.z)
+            loss = self.E(x)
             print('{}epoch:{}'.format(epoch, loss))
             loss.backward()
             with torch.no_grad():
                 self.z = self.z - self.eta*self.z.grad
             self.z.requires_grad = True
+            # ax1.scatter()
         return 0
 
     def f(self, z):
@@ -31,8 +37,7 @@ class ukr:
         x = x / torch.sum(d, dim=1, keepdims=True)
         return x
 
-    def E(self, z):
-        x = self.f(z)
+    def E(self, x):
         loss = (self.x - x)**2
         loss = torch.sum(loss)/100
         return loss
