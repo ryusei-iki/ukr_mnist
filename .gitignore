@@ -130,7 +130,6 @@ dmypy.json
 
 .DS_Store
 
-#iki
 poetry.lock
 dynamics.code-workspace
 *.png
